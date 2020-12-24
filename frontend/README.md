@@ -16,3 +16,8 @@
 
 * Referências: https://testing-library.com/docs/react-testing-library/intro
 <hr>
+
+## Styled-components
+    * yarn add styled-components --save
+* Link para a instalação completa
+	* https://medium.com/@jccamargo15/styled-components-instala%C3%A7%C3%A3o-e-configura%C3%A7%C3%A3o-b%C3%A1sica-3a2751a3e83f
