@@ -78,7 +78,7 @@ export default () => {
                 <Container>
                     <Row>
                         <Col xs='3'>
-                            <Button variant="danger" onClick={limpar}>C</Button>
+                            <Button variant="danger" onClick={() => limpar()}>C</Button>
                         </Col>
                         <Col xs='9'>
                             <Form.Control
@@ -87,6 +87,7 @@ export default () => {
                                 className='text-right'
                                 readOnly='readonly'
                                 value={txtNumeros}
+                                data-testid='txtNumeros'
                             />
                         </Col>
                     </Row>
@@ -102,7 +103,7 @@ export default () => {
                             <Button variant="light" onClick={() => adicionarNumeros('9')}>9</Button>
                         </Col>
                         <Col>
-                            <Button variant="warning" onClick={() => definirOperacao('/')}>/</Button>
+                            <Button variant="warning" onClick={() => definirOperacao(DIVISAO)}>/</Button>
                         </Col>
                     </Row>
 
@@ -117,7 +118,7 @@ export default () => {
                             <Button variant="light" onClick={() => adicionarNumeros('6')}>6</Button>
                         </Col>
                         <Col>
-                            <Button variant="warning" onClick={() => definirOperacao('*')}>*</Button>
+                            <Button variant="warning" onClick={() => definirOperacao(MULTIPLICACAO)}>*</Button>
                         </Col>
                     </Row>
 
@@ -132,7 +133,7 @@ export default () => {
                             <Button variant="light" onClick={() => adicionarNumeros('3')}>3</Button>
                         </Col>
                         <Col>
-                            <Button variant="warning" onClick={() => definirOperacao('-')}>-</Button>
+                            <Button variant="warning" onClick={() => definirOperacao(SUBTRACAO)}>-</Button>
                         </Col>
                     </Row>
 
@@ -147,7 +148,7 @@ export default () => {
                             <Button variant="success" onClick={() => acaoCalcular()}>=</Button>
                         </Col>
                         <Col>
-                            <Button variant="warning" onClick={() => definirOperacao('+')}>+</Button>
+                            <Button variant="warning" onClick={() => definirOperacao(SOMA)}>+</Button>
                         </Col>
                     </Row>
                 </Container>
